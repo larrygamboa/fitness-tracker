@@ -1,49 +1,49 @@
 // Necessary dependencies
 const router = require("express").Router();
-const db = require("../models");
+const Workout = require("../models/workout.js");
 
 // 
 router.get("/api/workouts", (req, res) => {
-    // getNotes()
-    //     .then((notes) => {
-    //         res.json(notes);
-    // })
-    // .catch(err => {
-    //     res.json(err);
-    // });
+    Workout.find({})
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
 });
   
 // 
 router.post("/api/workouts", (req, res) => {
-    // addNote(req.body)
-    //     .then((note) => {
-    //         res.json(note);
-    // })
-    // .catch((error) => {
-    //     res.status(500).json(error);
-    // });
+    Workout.create({})
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
 });
   
 // 
 router.get("/api/workouts/range", (req, res) => {
-    // getNotes()
-    //     .then((notes) => {
-    //         res.json(notes);
-    // })
-    // .catch(err => {
-    //     res.json(err);
-    // });
+    Workout.find({})
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
 });
 
 // 
 router.post("/api/workouts/:id", (req, res) => {
-    // addNote(req.body)
-    //     .then((note) => {
-    //         res.json(note);
-    // })
-    // .catch((error) => {
-    //     res.status(500).json(error);
-    // });
+    Workout.find({})
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    });
 });
   
 module.exports = router;

@@ -6,7 +6,7 @@ const logger = require("morgan");
 // Define PORT
 const PORT = process.env.PORT || 3000;
 
-const db = require("./models");
+// const db = require("./models/workout.js");
 
 const app = express();
 
@@ -16,7 +16,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect mongdb
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
 // Import routes
 app.use(require("./routes/htmlRoutes.js"));
