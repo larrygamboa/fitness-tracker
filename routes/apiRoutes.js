@@ -2,7 +2,7 @@
 const router = require("express").Router();
 const Workout = require("../models/workout.js");
 
-// 
+// Call workout data from API
 router.get("/api/workouts", (req, res) => {
     Workout.find({})
     .then(dbWorkout => {
@@ -13,7 +13,7 @@ router.get("/api/workouts", (req, res) => {
     });
 });
   
-// 
+// Create new workout
 router.post("/api/workouts", (req, res) => {
     Workout.create({})
     .then(dbWorkout => {
@@ -24,7 +24,7 @@ router.post("/api/workouts", (req, res) => {
     });
 });
   
-// 
+// Populate workout to dashboard
 router.get("/api/workouts/range", (req, res) => {
     Workout.find({})
     .then(dbWorkout => {
@@ -35,7 +35,7 @@ router.get("/api/workouts/range", (req, res) => {
     });
 });
 
-// 
+// Update workout data
 router.post("/api/workouts/:id", (req, res) => {
     Workout.find({})
     .then(dbWorkout => {
