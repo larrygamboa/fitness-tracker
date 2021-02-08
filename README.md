@@ -4,7 +4,7 @@
 https://github.com/larrygamboa/fitness-tracker
 
 **Heroku link**:
-https://xxxxx-xxxxx-00000.herokuapp.com/
+https://morning-dawn-77684.herokuapp.com/
 
 ## Purpose
 
