@@ -38,5 +38,6 @@ As a user, I want to be able to view create and track daily workouts. I want to 
 
 ## Screenshots
 
-![alt text](URL goes here)
+![alt text](https://github.com/larrygamboa/fitness-tracker/blob/main/images/fitness-tracker-screenshot-a.png)
+![alt text](https://github.com/larrygamboa/fitness-tracker/blob/main/images/fitness-tracker-screenshot-b.png)
 
