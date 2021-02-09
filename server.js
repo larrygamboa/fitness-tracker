@@ -16,10 +16,11 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect mongdb
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/dbWorkout", { 
   useNewUrlParser: true,
-  useFindAndModify: false,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false
 });
 
 // Import routes
